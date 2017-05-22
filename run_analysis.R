@@ -1,4 +1,4 @@
-#code for the run
+#setwd('Data Science with R/FProject/UCI HAR Dataset/')
 ##analysis of FitBit Data
 ##Activities: 
 activities <- c('WALKING','WALKING_UPSTAIRS', 'WALKING_DOWNSTAIRS', 'SITTING', 'STANDING', 'LAYING')
@@ -16,4 +16,8 @@ names(labels) <- activities
 
 #subject - person taking part in the study
 
-measurement
+setwd('Data Science with R/FProject/UCI HAR Dataset/')
+result <- read.fwf(file = 'test/X_test.txt', widths = rep(16,30) , header=FALSE)
+write.table(result, file = 'test/X_result.txt', row.names = FALSE)
+file.show('test\X_result.txt')
+
